@@ -1,6 +1,3 @@
-
-
-
 window.onload = function(){
 	initialize();
 }
@@ -8,11 +5,11 @@ window.onload = function(){
 $(function(){
 	$("th").click(function(){
 		var picture = this.getElementsByTagName("img")[0].getAttribute("src");
-		if(picture == "asced.png"){
-				this.getElementsByTagName("img")[0].src = "desced.png";
+		if(picture == "ascend.png"){
+				this.getElementsByTagName("img")[0].src = "descend.png";
 				sortcol($(this), true);
 			}else{
-				this.getElementsByTagName("img")[0].src = "asced.png";
+				this.getElementsByTagName("img")[0].src = "ascend.png";
 				sortcol($(this), false);
 			}
 		
@@ -25,7 +22,7 @@ function initialize(){
 	var hape = document.getElementsByTagName("th");
 	for(var i = 0; i < hape.length; i++){
 		var myImage = document.createElement("img");
-		myImage.src = "desced.png";
+		myImage.src = "descend.png";
 		myImage.style.float = "right";
 		hape[i].appendChild(myImage);
 	}
