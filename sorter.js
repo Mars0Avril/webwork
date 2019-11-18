@@ -1,11 +1,5 @@
-
-
-
-window.onload = function(){
-	initialize();
-}
-
 $(document).ready(function(){
+	initialize();
 	$("th").click(function(){
 		var picture = this.getElementsByTagName("p")[0].innerHTML;
 		if(picture == "d"){
