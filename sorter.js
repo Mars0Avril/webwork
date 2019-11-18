@@ -4,15 +4,16 @@ window.onload = function(){
 
 $(function(){
 	$("th").click(function(){
-		var picture = this.getElementsByTagName("img")[0].getAttribute("src");
-		if(picture == "ascend.png"){
-				this.getElementsByTagName("img")[0].src = "descend.png";
-				sortcol($(this), true);
-			}else{
-				this.getElementsByTagName("img")[0].src = "ascend.png";
-				sortcol($(this), false);
-			}
+// 		var picture = this.getElementsByTagName("img")[0].getAttribute("src");
+// 		if(picture == "ascend.png"){
+// 				this.getElementsByTagName("img")[0].src = "descend.png";
+// 				sortcol($(this), true);
+// 			}else{
+// 				this.getElementsByTagName("img")[0].src = "ascend.png";
+// 				sortcol($(this), false);
+// 			}
 		
+		alert("SSS");
 	});
 	changeother();
 });
