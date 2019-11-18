@@ -9,10 +9,10 @@ $(document).ready(function(){
 	$("th").click(function(){
 		var picture = this.getElementsByTagName("p")[0].innerText;
 		if(picture == "d"){
-				this.getElementsByTagName("p")[0].innerText = "u";
+				this.getElementsByTagName("p")[0].innerHtml = "u";
 				sortcol($(this), true);
 			}else{
-				this.getElementsByTagName("p")[0].innerText = "d";
+				this.getElementsByTagName("p")[0].innerHtml = "d";
 				sortcol($(this), false);
 			}
 		
