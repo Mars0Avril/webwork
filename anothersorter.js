@@ -1,11 +1,18 @@
+
+
+
+window.onload = function(){
+	initialize();
+}
+
 $(function(){
 	$("th").click(function(){
-		var picture = this.setAttribute("id", "up");
-		if(picture == "up"){
-				this.setAttribute("id", "down");
+		var picture = this.getElementsByTagName("img")[0].getAttribute("src");
+		if(picture == "asced.png"){
+				this.getElementsByTagName("img")[0].src = "desced.png";
 				sortcol($(this), true);
 			}else{
-				this.setAttribute("id", "up");
+				this.getElementsByTagName("img")[0].src = "asced.png";
 				sortcol($(this), false);
 			}
 		
@@ -13,7 +20,16 @@ $(function(){
 	changeother();
 });
 
-
+function initialize(){
+	$("tr:even").css("background","#C3C3C3");
+	var hape = document.getElementsByTagName("th");
+	for(var i = 0; i < hape.length; i++){
+		var myImage = document.createElement("img");
+		myImage.src = "desced.png";
+		myImage.style.float = "right";
+		hape[i].appendChild(myImage);
+	}
+}
 
 function changeother(){
 	$("th").click(function(){
