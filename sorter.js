@@ -1,30 +1,33 @@
+
+
+
 window.onload = function(){
 	initialize();
 }
 
 $(function(){
 	$("th").click(function(){
-// 		var picture = this.getElementsByTagName("img")[0].getAttribute("src");
-// 		if(picture == "ascend.png"){
-// 				this.getElementsByTagName("img")[0].src = "descend.png";
-// 				sortcol($(this), true);
-// 			}else{
-// 				this.getElementsByTagName("img")[0].src = "ascend.png";
-// 				sortcol($(this), false);
-// 			}
+		var picture = this.getElementsByTagName("p")[0].innerText;
+		if(picture == "d"){
+				this.getElementsByTagName("p")[0].innerText = "u";
+				sortcol($(this), true);
+			}else{
+				this.getElementsByTagName("p")[0].innerText = "d";
+				sortcol($(this), false);
+			}
 		
-		alert("SSS");
 	});
 	changeother();
 });
 
 function initialize(){
-	$("tr:even").addClass("alternate");
+	$("tr:even").css("background","#C3C3C3");
 	var hape = document.getElementsByTagName("th");
 	for(var i = 0; i < hape.length; i++){
-		var myImage = document.createElement("img");
-		myImage.src = "descend.png";
+		var myImage = document.createElement("p");
+		myImage.innerHTML = "d";
 		myImage.style.float = "right";
+		myImage.style.opacity = "0";
 		hape[i].appendChild(myImage);
 	}
 }
@@ -44,6 +47,6 @@ function sortcol(hape,way){
 	})
 	if(way == true)	rows.reverse();
 	tablebody.append(rows);
-	$("tr:odd").removeClass("alternate");
-	$("tr:even").addClass("alternate");
+	$("tr:odd").css("background","white");
+	$("tr:even").css("background","#C3C3C3");
 }
