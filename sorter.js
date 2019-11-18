@@ -5,7 +5,7 @@ window.onload = function(){
 	initialize();
 }
 
-$(function(){
+$(document).ready(function(){
 	$("th").click(function(){
 		var picture = this.getElementsByTagName("p")[0].innerText;
 		if(picture == "d"){
